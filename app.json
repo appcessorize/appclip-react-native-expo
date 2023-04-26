@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "clipper",
+    "slug": "clipper",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.developer.associated-appclip-app-identifiers": [
+          "$(AppIdentifierPrefix)undefined.Clip"
+        ]
+      },
+      "bundleIdentifier": "com.expomang.clipper"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-app-clip",
+        {
+          "name": "clipper Clip"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "build": {
+          "experimental": {
+            "ios": {
+              "appExtensions": [
+                {
+                  "targetName": "clipperClip",
+                  "bundleIdentifier": "undefined.Clip",
+                  "entitlements": {
+                    "com.apple.developer.parent-application-identifiers": [
+                      "$(AppIdentifierPrefix)undefined"
+                    ],
+                    "com.apple.developer.on-demand-install-capable": true,
+                    "com.apple.developer.applesignin": [
+                      "Default"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "projectId": "b4e46774-dd92-4597-9429-00ce190b30fc"
+      }
+    }
+  }
+}
